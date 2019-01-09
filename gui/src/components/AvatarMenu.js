@@ -25,7 +25,6 @@ const styles = theme => {
     },
     menuListGrow: {
       marginTop: 10,
-      borderRadius: theme.spacing.unit * 2,
       backgroundColor: theme.palette.primary.main
     },
     menuItem: {
