@@ -27,6 +27,10 @@ const styles = theme => {
         backgroundColor: fade(theme.palette.grey.A100, 0.2)
       }
     },
+    content: {
+      position: 'relative',
+      paddingLeft: 50
+    },
     status: {
       position: 'absolute',
       top: 0,
@@ -39,7 +43,10 @@ const styles = theme => {
       height: '100%'
     },
     runDetails: {
-      padding: theme.spacing.unit * 4
+      paddingTop: theme.spacing.unit * 3,
+      paddingBottom: theme.spacing.unit * 3,
+      paddingLeft: theme.spacing.unit * 4,
+      paddingRight: theme.spacing.unit * 4
     }
   }
 }
@@ -69,7 +76,7 @@ const RecentActivity = ({classes, runs}) => {
           {runs.map(r => (
             <TableRow key={r.id}>
               <TableCell scope='row' className={classes.cell}>
-                <div style={{position: 'relative', paddingLeft: '50px'}}>
+                <div className={classes.content}>
                   <div className={classes.status}>
                     <StatusIcon>{r.status}</StatusIcon>
                   </div>

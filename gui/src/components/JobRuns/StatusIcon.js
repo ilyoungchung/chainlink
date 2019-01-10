@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 import Icon from '@material-ui/core/Icon'
 import classNames from 'classnames'
+import SuccessIcon from 'components/Icons/Success'
 
 const styles = theme => {
   const iconShared = {
@@ -37,9 +38,7 @@ const styles = theme => {
 const StatusIcon = ({children, classes, className}) => {
   if (children === 'completed') {
     return (
-      <Icon className={classNames(classes.completed, className)} title={children}>
-        done
-      </Icon>
+      <SuccessIcon width={100} height={100} />
     )
   } else if (children === 'errored') {
     return (
